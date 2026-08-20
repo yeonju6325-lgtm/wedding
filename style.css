@@ -4,7 +4,8 @@
 
 body {
     margin: 0;
-    background: #f5f1e9;
+
+    background: #000;
     color: white;
 
     font-family:
@@ -21,7 +22,14 @@ main {
     width: 100%;
     max-width: 430px;
     margin: 0 auto;
+
+    background: #000;
 }
+
+
+/* =========================
+   COVER
+========================= */
 
 .cover {
     position: relative;
@@ -57,23 +65,142 @@ main {
     justify-content: center;
 
     text-align: center;
+
+    color: black;
 }
 
 .names {
-    margin: 0 0 12px;
+    margin: 0 0 16px;
 
-    font-size: 25px;
+    font-size: 32px;
     font-weight: 400;
 }
 
 .date {
-    margin: 0 0 5px;
+    margin: 0 0 6px;
 
-    font-size: 13px;
+    font-size: 15px;
+    font-weight: 400;
+
+    letter-spacing: 0.05em;
 }
 
 .time {
     margin: 0;
 
-    font-size: 12px;
+    font-size: 14px;
+
+    letter-spacing: 0.08em;
+}
+
+
+/* =========================
+   SECOND SECTION
+========================= */
+
+.story {
+    width: 100%;
+
+    padding-bottom: 100px;
+
+    background: #000;
+}
+
+.story-image {
+    position: relative;
+
+    width: 100%;
+}
+
+.story-image img {
+    width: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* 이미지 아래 문구 */
+
+.story-text {
+    margin: 0;
+
+    padding: 35px 28px 20px;
+
+    color: white;
+
+    font-size: 16px;
+    font-weight: 300;
+
+    line-height: 1.8;
+
+    text-align: center;
+
+    word-break: keep-all;
+}
+
+
+/* =========================
+   THIRD SECTION
+========================= */
+
+.third {
+    width: 100%;
+
+    background: #000;
+
+    padding-bottom: 100px;
+}
+
+.third-image {
+    width: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* =========================
+   SCROLL ANIMATION
+========================= */
+
+.reveal {
+    opacity: 0;
+
+    transform: translateY(40px);
+
+    transition:
+        opacity 1.6s ease,
+        transform 1.6s ease;
+}
+
+
+/* 이미지가 화면에 들어오면 */
+
+.reveal.show {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* 문구 */
+
+.reveal-text {
+    opacity: 0;
+
+    transform: translateY(25px);
+
+    transition:
+        opacity 1.8s ease,
+        transform 1.8s ease;
+}
+
+
+.reveal-text.show {
+    opacity: 1;
+
+    transform: translateY(0);
 }
